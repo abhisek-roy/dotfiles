@@ -6,7 +6,7 @@
 #fi
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/atomic.omp.json)"
+    eval "$(oh-my-posh init zsh --config ${XDG_DATA_HOME:-${HOME}}/.config/ohmyposh/zen.toml)"
 fi
 
 # Set the directory we want to store zinit and plugins
