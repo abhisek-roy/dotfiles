@@ -13,7 +13,7 @@ version = 3
 
   [[blocks.segments]]
     leading_diamond = '╭─'
-    template = ' {{ .Name }} '
+    template = '{{ .Name }} '
     foreground = '#ffffff'
     background = '#0077c2'
     type = 'shell'
@@ -228,12 +228,12 @@ version = 3
       windows = ''
 
   [[blocks.segments]]
+   leading_diamond = ''
    template = ' {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }} '
     foreground = '#262626'
     background = '#f36943'
-    powerline_symbol = ''
     type = 'battery'
-    style = 'powerline'
+    style = 'diamond'
     background_templates = ['{{if eq "Charging" .State.String}}#b8e994{{end}}', '{{if eq "Discharging" .State.String}}#fff34e{{end}}', '{{if eq "Full" .State.String}}#33DD2D{{end}}']
     invert_powerline = true
 
@@ -242,20 +242,7 @@ version = 3
       charging_icon = ' '
       discharging_icon = ' '
 
-  [[blocks.segments]]
-    leading_diamond = ''
-    trailing_diamond = ''
-    template = '  {{ .CurrentDate | date .Format }} '
-    foreground = '#ffffff'
-    background = '#40c4ff'
-    type = 'time'
-    style = 'diamond'
-    invert_powerline = true
-
-    [blocks.segments.properties]
-      time_format = '_2'
-
-[[blocks]]
+  [[blocks]]
   type = 'prompt'
   alignment = 'left'
   newline = true
