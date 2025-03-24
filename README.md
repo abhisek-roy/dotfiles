@@ -2,17 +2,18 @@
 
 ## Setup the OS
 ### Linux
-Would Homebrew work here? Need to test.
+Install zsh 
 chsh -s $(which zsh)
+
+Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+Make sure this lines stays at the top
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 ### macOS
 Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-## Download the Dotfiles
-
-## Install Stow
-sudo apt-get install stow
 
 ## Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -27,3 +28,13 @@ brew install jandedobbeleer/oh-my-posh/oh-my-posh
 
 ### Linux
 curl -s https://ohmyposh.dev/install.sh | bash -s
+
+### Get fonts
+oh-my-posh font install meslo
+
+Set font MesloLGS Nerd Font Mono 12
+
+## Download the Dotfiles
+
+## Install Stow
+sudo apt-get install stow
