@@ -5,6 +5,11 @@
 #  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 #fi
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     eval "$(oh-my-posh init zsh --config ${XDG_DATA_HOME:-${HOME}}/.config/ohmyposh/zen.toml)"
 fi
@@ -77,11 +82,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
