@@ -1,13 +1,13 @@
 # Restoring dotfiles
 
 ## Linux
-#### Ubuntu: Install curl, git, neovim, gcc make ripgrep fd unzip and stow
+#### Ubuntu:
 ```bash
-sudo apt install curl stow git neovim gcc make ripgrep fd unzip python3
+sudo apt install curl stow git neovim gcc make ripgrep fd unzip python3 cmake xclip ninja 
 ```
-#### Arc: Install curl, git, neovim, gcc make ripgrep fd unzip and stow
+#### Arc:
 ```bash
-sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim curl stow openssh python3
+sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim curl stow openssh python3 cmake xclip ninja 
 ```
 
 #### Set up Git
