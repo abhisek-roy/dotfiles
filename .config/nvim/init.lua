@@ -167,6 +167,9 @@ vim.o.scrolloff = 15
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+-- Helps with Obsidian.nvim
+vim.opt.conceallevel = 1
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -253,10 +256,7 @@ rtp:prepend(lazypath)
 require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"NMAC427/guess-indent.nvim", -- Detect tabstop and shiftwidth automatically
-	{ -- VimBeGood
-		"ThePrimeagen/vim-be-good",
-		cmd = { "VimBeGood" }, -- Will load only when command VimBeGood is entered
-	},
+
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
 	-- keys can be used to configure plugin behavior/loading/etc.
@@ -291,32 +291,7 @@ require("lazy").setup({
 			},
 		},
 	},
-	-- {
-	-- 	"epwalsh/obsidian.nvim",
-	-- 	version = "*", -- recommended, use latest release instead of latest commit
-	-- 	-- lazy = true,
-	-- 	-- ft = "markdown",
-	-- 	-- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
-	-- 	-- event = {
-	-- 	--   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-	-- 	--   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
-	-- 	--   -- refer to `:h file-pattern` for more examples
-	-- 	--   "BufReadPre path/to/my-vault/*.md",
-	-- 	--   "BufNewFile path/to/my-vault/*.md",
-	-- 	-- },
-	-- 	dependencies = {
-	-- 		-- Required.
-	-- 		"nvim-lua/plenary.nvim",
-	-- 	},
-	-- 	opts = {
-	-- 		workspaces = {
-	-- 			{
-	-- 				name = "Knowledge",
-	-- 				path = "~/Knowledge",
-	-- 			},
-	-- 		},
-	-- 	},
-	-- },
+	--
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
 	--
 	-- This is often very useful to both group configuration, as well as handle
@@ -1051,7 +1026,7 @@ require("lazy").setup({
 	--    This is the easiest way to modularize your config.
 	--
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-	-- { import = 'custom.plugins' },
+	{ import = "custom.plugins" },
 	--
 	-- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
 	-- Or use telescope!
