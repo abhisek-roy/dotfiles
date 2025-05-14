@@ -117,6 +117,12 @@ vim.o.showmode = false
 --  See `:help 'clipboard'`
 vim.schedule(function()
 	vim.o.clipboard = "unnamedplus"
+
+	-- WSL specific
+	if os.getenv("WSL_DISTRO_NAME") then
+		print("In wsl")
+		vim.g.clipboard = "win32yank"
+	end
 end)
 
 -- Enable break indent
@@ -467,6 +473,18 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>sn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			end, { desc = "[S]earch [N]eovim files" })
+
+			-- Shortcut for searching your Obsidian Notes files
+			vim.keymap.set(
+				"n",
+				"<leader>sc",
+				"<cmd>ObsidianQuickSwitch<CR>",
+				{ desc = "[S]earch/[C]reate Obsidian files" }
+			)
+			-- Shortcut for searching your Obsidian Notes files
+			-- if vim.bo.filetype == "markdown" then
+			vim.keymap.set("n", "<leader>st", "<cmd>ObsidianTemplate<CR>", { desc = "Apply Obsidian Template" })
+			-- end
 		end,
 	},
 
