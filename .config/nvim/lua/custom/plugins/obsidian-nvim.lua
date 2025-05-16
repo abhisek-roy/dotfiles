@@ -8,6 +8,7 @@ return {
 		version = "*", -- recommended, use latest release instead of latest commit
 		enabled = true,
 		-- lazy = true,
+		-- cmd = { "ObsidianQuickSwitch" },
 		-- ft = "markdown",
 		-- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
 		-- event = {
@@ -39,7 +40,7 @@ return {
 			-- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
 			completion = {
 				-- Set to false to disable completion.
-				nvim_cmp = false,
+				nvim_cmp = true,
 				-- Trigger completion at 2 chars.
 				min_chars = 2,
 			},
