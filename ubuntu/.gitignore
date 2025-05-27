@@ -1,0 +1,12 @@
+# Files to ignore
+.DS_Store
+lazy-lock.json
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Folders to ignore
+# spell/
