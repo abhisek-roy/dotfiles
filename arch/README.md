@@ -3,7 +3,8 @@
 ## Currently, ml4w-arch is already installed. 
 ## Delete the content of the nvim folder in ml4w-arch
 ```zsh
-rm ~/ml4w-dotfiles/.config/nvim/init.vim
+rm ~/.mydotfiles/com.ml4w.dotfiles.stable/.config/nvim/init.vim
+
 ```
 
 ## Get the dotfiles from Github and install them
@@ -11,5 +12,5 @@ rm ~/ml4w-dotfiles/.config/nvim/init.vim
 ```zsh
 git clone https://github.com/abhisek-roy/dotfiles.git
 cd dotfiles/arch
-stow -S .config -t ~/ml4w-dotfiles/.config
+stow -S .config -t ~/.mydotfiles/com.ml4w.dotfiles.stable/.config
 ```
