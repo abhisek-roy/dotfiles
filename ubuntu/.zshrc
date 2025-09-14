@@ -11,7 +11,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    eval "$(oh-my-posh init zsh --config ${XDG_DATA_HOME:-${HOME}}/.config/ohmyposh/zen.toml)"
+    eval "$(oh-my-posh init zsh --config ${XDG_DATA_HOME:-${HOME}}/.config/ohmyposh/EDM115-newline.omp.json)"
 fi
 
 # Set the directory we want to store zinit and plugins
@@ -88,3 +88,5 @@ unset __conda_setup
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+. "$HOME/.local/bin/env"
