@@ -8,11 +8,13 @@
 sudo apt install curl stow git neovim gcc make ripgrep fd unzip python3 cmake xclip ninja 
 ```
 
-#### Arc
+#### Arch
 
 ```bash
-sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim curl stow openssh python3 cmake xclip ninja 
+sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim curl stow openssh python3 cmake xclip ninja fzf zoxide 
 ```
+
+Follow instructions captured within the Arch folder.
 
 #### Set up Git
 
@@ -20,9 +22,11 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
 
 ### Restore the Dotfiles
 
+For Ubuntu:
+
 ```bash
 git clone git@github.com:abhisek-roy/dotfiles.git
-cd dotfiles
+cd dotfiles/ubuntu
 stow -S .
 ```
 
