@@ -27,7 +27,7 @@ return {
         formatter = {
           enabled = true,
           auto_format = false, -- Set to true for format on save
-          tool = "swiftformat", -- or "swiftformat"
+          tool = "swift-format", -- or "swiftformat"
         },
 
         -- Linter (SwiftLint)
