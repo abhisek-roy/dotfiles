@@ -12,11 +12,6 @@
 
 (defcfg process-unmapped-keys no)
 
-;; (defsrc
-;;                 i 
-;;   caps a s d f j k l ;
-;; )
-
 (defchords cntrl $chord-time
   (a   ) a
   (   s) s
@@ -27,17 +22,13 @@
 )
 
 (defalias
-  c_C_a (chord cntrl a)
-  c_C_s (chord cntrl s)
-  c_C_l (chord cntrl l)
-  c_C_; (chord cntrl ;)
-  f_arr    (tap-hold 200 200 f (layer-while-held arrows))
+  c_C_a     (chord cntrl a)
+  c_C_s     (chord cntrl s)
+  c_C_l     (chord cntrl l)
+  c_C_;     (chord cntrl ;)
+  f_arr     (tap-hold 200 200 f (layer-while-held arrows))
 )
 
-;; (deflayer base
-;;                                                   i     
-;;   esc   @c_ctrl_a   @c_ctrl_s   d    @f_arr   j      k      @c_ctrl_l   @c_ctrl_;
-;; )
 (deflayer base
   grv        1         2         3         4         5         6         7         8         9         0         -         =         bspc
   tab        q         w         e         r         t         y         u         i         o         p         [         ]         \
@@ -47,14 +38,10 @@
 )
 
 
-;; (deflayer arrows
-;;                                                   up     
-;;   XX    XX          XX          XX    _       left   down   right       XX
-;; )
 (deflayer arrows
   grv        1         2         3         4         5         6         7         8         9         0         -         =         bspc
-  tab        q         w         e         r         t         y         XX        up        XX        p         [         ]         \
-  caps       a         s         d         _         g         XX        left      down      right     XX        '         ret
+  tab        q         w         e         r         t         y         [         ]         S-9       S-0       [         ]         \
+  caps       a         s         d         _         g         left      down      up        right     XX        '         ret
   lsft       z         x         c         v         b         n         XX        XX        XX        /         rsft
   lctl       lmet      lalt                  spc                                             ralt      rmet                rctl
 )
