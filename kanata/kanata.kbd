@@ -27,6 +27,7 @@
   c_C_l     (chord cntrl l)
   c_C_;     (chord cntrl ;)
   f_arr     (tap-hold 200 200 f (layer-while-held arrows))
+  spc_home  (tap-hold 200 200 spc (layer-while-held home_row))
 )
 
 (deflayer base
@@ -40,10 +41,17 @@
 
 (deflayer arrows
   grv        1         2         3         4         5         6         7         8         9         0         -         =         bspc
-  tab        q         w         e         r         t         y         [         ]         S-9       S-0       [         ]         \
+  tab        q         w         e         r         t         y         u         i         o         p         [         ]         \
   caps       a         s         d         _         g         left      down      up        right     XX        '         ret
   lsft       z         x         c         v         b         n         XX        XX        XX        /         rsft
   lctl       lmet      lalt                  spc                                             ralt      rmet                rctl
 )
 
 
+(deflayer home_row
+  grv        1         2         3         4         5         6         7         8         9         0         -         =         bspc
+  tab        q         S-9       S-[       [         t         y         ]         S-]       S-0       p         [         ]         \
+  esc        c         s         d         f         g         h         ret       bspc      l         ;         '         ret
+  lsft       z         x         c         v         b         n         m         ,         .         /         rsft
+  lctl       lmet      lalt                  _                                               ralt      rmet                rctl
+)
