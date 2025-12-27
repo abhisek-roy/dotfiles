@@ -35,7 +35,7 @@
   tab        q         w         e         r         t         y         u         i         o         p         [         ]         \
   esc        @c_C_a    @c_C_s    d         @f_arr    g         h         j         k         @c_C_l    @c_C_;    '         ret
   lsft       z         x         c         v         b         n         m         ,         .         /         rsft
-  lctl       lmet      lalt                  spc                                             ralt      rmet                rctl
+  lctl       lmet      lalt                  @spc_home                                       ralt      rmet                rctl
 )
 
 
