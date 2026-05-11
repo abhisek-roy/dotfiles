@@ -23,7 +23,6 @@ git clone git@github.com:abhisek-roy/dotfiles.git ~/dotfiles
 ```bash
 alacritty
 ```
-```
 
 ## zsh
 
@@ -104,12 +103,18 @@ Plugins auto-install on first launch.
 
 ## kanata
 
-**Packages:** `kanata`
+**Packages:** `kanata` from [GitHub Releases](https://github.com/jtroo/kanata/releases) and place is in `~/.local/bin/`
+
+**Create kanata folder:**
+
+```
+mkdir ~/.config/kanata
+```
 
 **Symlink:**
 
 ```bash
-ln -s ~/dotfiles/kanata ~/.config/kanata/kanata.kbd
+ln -s ~/dotfiles/kanata/kanata.kbd ~/.config/kanata/
 ```
 
 Only `kanata.kbd` is the active config. Other `.kbd` files are examples.
