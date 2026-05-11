@@ -1,133 +1,97 @@
-# Restoring dotfiles
+# Dotfiles
 
-## Linux
+App-specific configs. Clone and symlink what you need.
 
-#### Ubuntu
-
-```bash
-sudo apt install curl stow git neovim gcc make ripgrep fd unzip python3 cmake xclip ninja 
-```
-
-#### Arch
+**SSH setup:** [GitHub SSH key guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ```bash
-sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim curl stow openssh python3 cmake xclip ninja fzf zoxide 
+git clone git@github.com:abhisek-roy/dotfiles.git ~/dotfiles
 ```
 
-Follow instructions captured within the Arch folder.
+---
 
-#### Set up Git
+## zsh
 
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+**Packages:** `zsh git curl fzf zoxide`
 
-### Restore the Dotfiles
-
-For Ubuntu:
-
-```bash
-git clone git@github.com:abhisek-roy/dotfiles.git
-cd dotfiles/ubuntu
-stow -S .
-```
-
-#### Install fzf
-
-```bash
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-```
-
-Say n to all follow-up confirmations.
-
-#### Install zoxide
-
-```bash
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-```
-
-#### Install oh-my-posh
+**oh-my-posh:** `oh-my-posh` (if not in repo, install via script below)
 
 ```bash
 curl -s https://ohmyposh.dev/install.sh | bash -s
 ```
 
-#### Get fonts
+**Fonts:**
 
 ```bash
 oh-my-posh font install JetBrainsMono
 ```
 
-Set font MesloLGS Nerd Font Mono 12 and then restart the terminal.
+Set terminal font to `JetBrainsMono Nerd Font Mono`.
 
-#### Install zsh
-
-For Ubuntu:
+**Symlinks:**
 
 ```bash
-sudo apt install zsh
+ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+```
+
+```bash
+ln -s ~/dotfiles/zsh/ohmyposh ~/.config/ohmyposh
+```
+
+**Set default shell:**
+
+```bash
 chsh -s $(which zsh)
 ```
 
-For Arch:
+Zinit and plugins auto-install on first launch.
+
+**Machine-specific config:** Create `~/.zshrc.local` for local overrides (conda, toolchains, etc.). It is sourced automatically and gitignored.
+
+---
+
+## tmux
+
+**Packages:** `tmux git`
+
+**Symlink:**
 
 ```bash
-sudo pacman -S --noconfirm --needed zsh
-chsh -s /bin/zsh
+ln -s ~/dotfiles/tmux ~/.config/tmux
 ```
 
-## macOS
-
-### Restore the Dotfiles
-
-#### Install Stow
-
-We need Homebrew to install Stow.
+**Install TPM:**
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-After installation, run these. Your .zshrc will be updated -
+Then inside tmux: `Ctrl+Space`, `Shift+I` to install plugins.
+
+---
+
+## nvim
+
+**Packages:** `neovim gcc make git ripgrep fd unzip python3 cmake xclip ninja`
+
+**Symlink:**
 
 ```bash
-echo >> /home/aroy/.zshrc
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/aroy/.zshrc
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+ln -s ~/dotfiles/nvim ~/.config/nvim
 ```
 
-#### Set up Git
+Plugins auto-install on first launch.
 
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+---
+
+## kanata
+
+**Packages:** `kanata`
+
+**Symlink:**
 
 ```bash
-git clone git@github.com:abhisek-roy/dotfiles.git
-cd dotfiles
-stow -S .
+ln -s ~/dotfiles/kanata ~/.config/kanata
 ```
 
-####  Install fzf
-
-```bash
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-```
-
-####  Install zoxide
-
-```bash
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-```
-
-####  Install oh-my-posh
-
-```bash
-curl -s https://ohmyposh.dev/install.sh | bash -s
-```
-
-#### Get fonts
-
-```bash
-oh-my-posh font install meslo
-```
-
-Set font MesloLGS Nerd Font Mono 12
+Only `kanata.kbd` is the active config. Other `.kbd` files are examples.
