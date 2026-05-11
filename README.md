@@ -10,16 +10,27 @@ git clone git@github.com:abhisek-roy/dotfiles.git ~/dotfiles
 
 ## Contents
 
+- [alacritty](#alacritty)
 - [zsh](#zsh)
 - [tmux](#tmux)
 - [nvim](#nvim)
 - [kanata](#kanata)
 
 ---
+## alacritty
+
+**Packages**:
+```bash
+alacritty
+```
+```
 
 ## zsh
 
-**Packages:** `zsh git curl fzf zoxide`
+**Packages:** 
+```bash
+zsh git curl fzf zoxide
+```
 
 **oh-my-posh:** `oh-my-posh` (if not in repo, install via script below)
 
@@ -33,16 +44,16 @@ curl -s https://ohmyposh.dev/install.sh | bash -s
 oh-my-posh font install JetBrainsMono
 ```
 
-Set terminal font to `JetBrainsMono Nerd Font Mono`.
+Set terminal font to `JetBrainsMono Nerd Font Mono`.  Alacritty config does this currently.
 
 **Symlinks:**
 
 ```bash
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
-```
 
-```bash
 ln -s ~/dotfiles/zsh/ohmyposh ~/.config/ohmyposh
+
+ln -s ~/dotfiles/alacritty/ ~/.config/
 ```
 
 **Set default shell:**
