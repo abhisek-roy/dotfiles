@@ -8,6 +8,13 @@ App-specific configs. Clone and symlink what you need.
 git clone git@github.com:abhisek-roy/dotfiles.git ~/dotfiles
 ```
 
+## Contents
+
+- [zsh](#zsh)
+- [tmux](#tmux)
+- [nvim](#nvim)
+- [kanata](#kanata)
+
 ---
 
 ## zsh
