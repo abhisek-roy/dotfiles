@@ -109,7 +109,7 @@ Plugins auto-install on first launch.
 **Symlink:**
 
 ```bash
-ln -s ~/dotfiles/kanata ~/.config/kanata
+ln -s ~/dotfiles/kanata ~/.config/kanata/kanata.kbd
 ```
 
 Only `kanata.kbd` is the active config. Other `.kbd` files are examples.
