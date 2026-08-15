@@ -51,7 +51,7 @@
 (deflayer home_row
   grv        1         2         3         4         5         6         7         8         9         0         -         =         bspc
   tab        q         S-9       S-[       [         t         y         ]         S-]       S-0       p         [         ]         \
-  esc        c         s         d         f         g         h         ret       bspc      l         ;         '         ret
-  lsft       z         x         c         v         b         n         m         ,         .         /         rsft
+  esc        c         s         d         f         g         h         ret       bspc      grv       ;         '         ret
+  lsft       z         x         c         v         b         S-4       =         S-2       .         /         rsft
   lctl       lmet      lalt                  _                                               ralt      rmet                rctl
 )
